@@ -1,3 +1,4 @@
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -29,9 +30,7 @@ public class CuerpoCeleste {
     }
 
     public Set<CuerpoCeleste> getSatelites() {
-        Set<CuerpoCeleste> newSatelite = new HashSet<>();
-        newSatelite.addAll(satelites);
-        return newSatelite;
+        return satelites;
     }
 
     public boolean addSatelite(CuerpoCeleste c){
