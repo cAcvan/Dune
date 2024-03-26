@@ -80,5 +80,20 @@ public class Main {
         for(CuerpoCeleste c : LunasMarte){
             System.out.println(c.getNombre());
         }
+
+        Set<CuerpoCeleste> lunas = new HashSet<CuerpoCeleste>();
+
+        for(Map.Entry<String, CuerpoCeleste> entry : sistemaSolar.entrySet()){
+            if(entry.getValue().getTipoCuerpo().equals(CuerpoCeleste.TipoCuerpoCeleste.LUNA)){
+                lunas.add(entry.getValue());
+            }
+        }
+
+        System.out.println();
+
+        System.out.println("Lista de lunas: ");
+        for(CuerpoCeleste c : lunas){
+            System.out.println(c);
+        }
     }
 }
